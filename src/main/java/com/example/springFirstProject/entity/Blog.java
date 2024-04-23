@@ -9,16 +9,16 @@ import jakarta.persistence.Id;
 public class Blog {
 	
 		@Id
-    	@GeneratedValue(strategy = GenerationType.AUTO)
-		private Long blogId;
+    	@GeneratedValue(strategy = GenerationType.IDENTITY)
+		private Long id;
 		
 		private String blogTitle;
 		
 		public Long getBlogId() {
-			return blogId;
+			return id;
 		}
 		public void setBlogId(Long blogId) {
-			this.blogId = blogId;
+			this.id = blogId;
 		}
 		public String getBlogTitle() {
 			return blogTitle;

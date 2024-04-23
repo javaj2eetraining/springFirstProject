@@ -36,8 +36,6 @@ public class Department {
 	private String departmentAddress;
 
 
-	@OneToMany(mappedBy = "department")
-	private List<Employee> employees;
-	
+
 
 }
