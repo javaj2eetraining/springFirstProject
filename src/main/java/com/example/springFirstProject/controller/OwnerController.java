@@ -18,7 +18,6 @@ public class OwnerController {
     public Owner saveOwner(@RequestBody Owner owner){
         return ownerService.saveOwner(owner);
 
-
     }
 
     @GetMapping("/getOwners")
@@ -33,16 +32,16 @@ public class OwnerController {
     }
 
     @GetMapping("/getOwnersName/{name}")
-    public Owner getOwnerByName(@PathVariable("name")  String ownrName  )
+    public List<Owner> getOwnerByName(@PathVariable("name")  String ownrName  )
     {
         return  ownerService.getOwnerByName(ownrName)  ;
     }
 
 
-//    @PutMapping("/update/{id}")
-//    public Owner updateOwner(@RequestBody Owner owner , @PathVariable("id") Long id){
-//        return ownerService.updateOwner(owner,id);
-//    }
+    @PutMapping("/updateOwner/{id}")
+    public Owner updateOwner(@RequestBody Owner owner , @PathVariable("id") Long id){
+        return ownerService.updateOwner(owner,id);
+    }
 
     @DeleteMapping("/delete/{id}")
     public String deleteOwner(@PathVariable("id") Long id){

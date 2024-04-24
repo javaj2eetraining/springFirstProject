@@ -13,7 +13,7 @@ import com.example.springFirstProject.entity.Owner;
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
 	
 	//public Owner findByOwnerId(Long ownerId);
-    public Owner findByOwnerName(String ownrName);
+    public List<Owner> findByOwnerName(String ownrName);
    // public Owner savOwner(Owner owner);
    // public List<Owner> findOwners();
 

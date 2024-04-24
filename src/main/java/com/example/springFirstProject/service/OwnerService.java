@@ -31,7 +31,7 @@ public class OwnerService {
         }
         return owner.get();
     }
-   public Owner getOwnerByName(String ownrName) {
+   public List<Owner> getOwnerByName(String ownrName) {
         return  ownerRepository.findByOwnerName(ownrName);
     }
 
