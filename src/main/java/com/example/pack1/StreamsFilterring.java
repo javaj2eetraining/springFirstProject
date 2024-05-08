@@ -56,6 +56,7 @@ public class StreamsFilterring {
         a3.add(4);  //16
         a3.add(5); //25
         int m = 0;
+        int sum=0;
         for(int i=0; i<a3.size(); i++){
               sum = sum+a3.get(i);
 
