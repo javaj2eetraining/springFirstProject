@@ -3,16 +3,18 @@ package com.example.springFirstProject.controller;
 import com.example.springFirstProject.entity.Department;
 import com.example.springFirstProject.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import com.example.springFirstProject.entity.Owner;
 
 import java.util.List;
 
 @RestController
+
 public class OwnerController {
 
     @Autowired
-    OwnerService ownerService;
+    OwnerService ownerService ;
 
     @PostMapping("/Owners")
     public Owner saveOwner(@RequestBody Owner owner){
